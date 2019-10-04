@@ -8,7 +8,9 @@ function App() {
   return (
     <div>
         <Navbar />
-        <Jumbotron />
+        <main style={{marginTop: "64px"}}>
+          <Jumbotron />
+        </main>
         {/* <Jumbotron />
         <Container>
           <Row>

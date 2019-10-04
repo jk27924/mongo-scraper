@@ -6,14 +6,16 @@
   position: fixed;
   /* padding: 0 30px; */
   background: red;
-  color: white;
+}
+
+.navbar__logo {
+  margin-left: 1rem;
 }
 
 .navbar__logo a {
   color: white;
   text-decoration: none;
   font-size: 30px;
-  padding: 0 30px;
 }
 
 .spacer {
@@ -23,7 +25,8 @@
 .navbar__navigation {
   display: flex;
   align-items: center;
-  height: 100%
+  height: 100%;
+  padding: 0 1rem;
 }
 .navbar__navigation-items ul {
   list-style: none;
@@ -33,13 +36,13 @@
 }
 
 .navbar__navigation-items li {
-  padding: 0 30px;
+  padding: 0 0.5rem;
 }
 
 .navbar__navigation-items a {
   color: white;
   text-decoration: none;
-  font-size: 20px;
+  /* font-size: 20px; */
 }
 
 .navbar__navigation-items a:hover,
