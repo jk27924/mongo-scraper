@@ -2,12 +2,14 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Navbar from "./components/Nav";
+import Drawer from "./components/ToggleButton/drawer"
 import Jumbotron from "./components/Jumbotron"
 
 function App() {
   return (
-    <div>
+    <div style={{height: "100%"}}>
         <Navbar />
+        <Drawer />
         <main style={{marginTop: "64px"}}>
           <Jumbotron />
         </main>
