@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "./HamburgerBtn.css";
 
 const hamburgerButton = props => (
     <button className="hamburger-button">

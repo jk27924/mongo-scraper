@@ -7,6 +7,9 @@ var mongoose = require("mongoose");
 var axios = require("axios");
 var cheerio = require("cheerio");
 
+// Requiring all models
+var db = require("./models");
+
 // Initialize Express
 var app = express();
 
@@ -15,7 +18,7 @@ var databaseUrl = "manutd";
 var collections = ["scraped"];
 
 // If deployed, use the deployed database || Otherwise use the local mongoHeadlines database
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/manutd";
 
     mongoose.connect(MONGODB_URI);
 
@@ -32,7 +35,7 @@ db.on("error", function(error) {
 
 app.get("/all", function(req, res) {
     // Query: In our database, go to the animals collection, then "find" everything
-    db.scraped.find({}, function(error, found) {
+    db.Article.find({}, function(error, found) {
       // Log any errors if the server encounters one
       if (error) {
         console.log(error);
@@ -59,6 +62,16 @@ app.get("/scrape", function(req, res) {
   
         var title = $(element).children().children().find(".mu-item__info").find('a').children().text();
         var link = $(element).find("a").attr("href");
+
+        if (link === "javascript:void(0)") {
+            return
+        }
+
+        if (link[0] === "/") {
+            link = "https://www.manutd.com" + link
+        }
+
+        
         // console.log(title);
   
         var data = {
@@ -66,7 +79,7 @@ app.get("/scrape", function(req, res) {
           link: link
         }
   
-        db.scraped.insert(data);
+        db.Article.insert(data);
         
         results.push(data);
       });

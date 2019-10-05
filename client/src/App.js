@@ -1,12 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
-import Navbar from "./components/Nav";
+import Navbar from "./components/Nav/Nav";
+import Jumbotron from "./components/Jumbotron/Jumbotron"
+import API from './utils/API';
+import ArticleBody from "./components/ArticleBody/ArticleBody"
 // import Drawer from "./components/ToggleButton/drawer"
-import Jumbotron from "./components/Jumbotron"
 // import BehindDrawer from "./components/BehindDrawer/BehindDrawer" 
 
-function App() {
+
+class App extends Component {
+  state = {
+    articles: []
+  };
+
+  componentDidMount() {
+    this.loadArticles();
+  };
+
+  loadArticles = () => {
+    API.getArticles()
+      .then(res =>
+        this.setState({ articles: res.data }))
+      .catch(err => console.log(err));
+  };
+  
   // FOR SIDE DRAWER
     // state = {
     //   drawerOpen: false
@@ -25,17 +42,19 @@ function App() {
     //   drawer = <Drawer />;
     //   behindDrawer = <BehindDrawer />;
     // }
+  render () {
+    return (
+      <div style={{height: "100%"}}>
+          <Navbar /> 
+          <main style={{marginTop: "64px"}}>
+            <Jumbotron />
+            <ArticleBody
+              articles={this.state.articles} />
+          </main>
+      </div>
+    )
+  }
 
-  return (
-    <div style={{height: "100%"}}>
-        <Navbar /> 
-        {/* // FOR SIDE DRAWER, attach this: // drawerHandler={this.drawerHandler} between Navbar slash*/}
-        {/* <Drawer />; */}
-        {/* <BehindDrawer />; */}
-        <main style={{marginTop: "64px"}}>
-          <Jumbotron />
-        </main>
-    </div>
 
     // FOR SIDE DRAWER
       // <div style={{height: "100%"}}>
@@ -46,7 +65,7 @@ function App() {
       //     <Jumbotron />
       //   </main>
       // </div>
-  );
+  
 
 
   

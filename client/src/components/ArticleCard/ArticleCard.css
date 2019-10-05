@@ -1,0 +1,12 @@
+.articleCard {
+    border: 1px rgb(92, 91, 91) solid;
+    height: 5rem;
+    padding: 15px;
+    font-size: 20px;
+    margin: 10px;
+}
+
+.articleCard a {
+    text-decoration: none;
+    color: red;
+}

@@ -1,6 +1,6 @@
 import React from "react";
-import HamburgerButton from "../ToggleButton/index"
-import "./style.css";
+import HamburgerButton from "../ToggleButton/HamburgerBtn"
+import "./Nav.css";
 
 // function Nav() {
 //   return (
