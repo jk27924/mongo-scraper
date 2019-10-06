@@ -4,4 +4,10 @@
   background: rgb(231, 231, 231);
   border: 2px solid black;
   margin: 10px;
+  text-align: center;
+}
+
+.jumbotron a {
+  text-decoration: none;
+  color: black;
 }
