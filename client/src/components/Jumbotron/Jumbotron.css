@@ -1,13 +1,24 @@
 .jumbotron {
-  min-height: 300px;
-  padding-top: 100px;
-  background: rgb(231, 231, 231);
-  border: 2px solid black;
+  min-height: 200px;
+  padding-top: 10px;
   margin: 10px;
+  background: white;
+  border: none;
   text-align: center;
+  font-size: 25px;
 }
 
 .jumbotron a {
   text-decoration: none;
   color: black;
+  padding: 30px;
+}
+
+.jumbotron img {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 30px;
 }
