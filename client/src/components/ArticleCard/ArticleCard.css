@@ -5,12 +5,13 @@
     font-size: 20px;
     margin: 10px;
     border: none;
-    background: white;
+    background: whitesmoke;
     text-align: center;
     font-size: 25px;
 }
 
 .articleCard a {
     text-decoration: none;
-    color:#c70000;
+    color: rgb(245, 130, 130);
+    font-weight: bolder;
 }
