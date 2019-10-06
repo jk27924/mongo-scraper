@@ -7,7 +7,7 @@ function Jumbotron() {
       {/* <img source={ ("../../../assets/images/jumbotron.png") }></img> */}
       <h1>MANCHESTER UNITED FC SCRAPER</h1>
       <a target="_blank" rel="noopener noreferrer" href="https://www.manutd.com">
-        Powered by Manchester United Official Webpage
+        Powered By Manchester United Official Webpage
       </a>
     </div>
   );

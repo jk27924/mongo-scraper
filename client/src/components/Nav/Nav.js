@@ -18,7 +18,7 @@ const Navbar = props => (
       <div>
         <HamburgerButton />
       </div>
-      <div className="navbar__logo"><a href="/">Manchester United FC</a></div>
+      <div className="navbar__logo"><a href="/">MANCHESTER UNITED FC</a></div>
       <div className="spacer"></div>
       <div className="navbar__navigation-items">
         <ul>
