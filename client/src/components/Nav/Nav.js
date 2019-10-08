@@ -1,6 +1,7 @@
 import React from "react";
 import HamburgerButton from "../ToggleButton/HamburgerBtn"
 import "./Nav.css";
+import { Link } from "react-router-dom";
 
 // function Nav() {
 //   return (
@@ -22,8 +23,12 @@ const Navbar = props => (
       <div className="spacer"></div>
       <div className="navbar__navigation-items">
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/">Saved Articles</a></li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/SavedArticle">Saved Articles</Link>
+          </li>
         </ul>
       </div>
     </nav>

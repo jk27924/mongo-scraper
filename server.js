@@ -71,12 +71,12 @@ app.get("/scrape", function(req, res) {
             link = "https://www.manutd.com" + link
         }
 
-        
         // console.log(title);
   
         var data = {
           title: title,
-          link: link
+          link: link,
+          isSaved: false
         }
   
         db.Article.insert(data);
@@ -89,6 +89,33 @@ app.get("/scrape", function(req, res) {
     })
 })
 
+
+// Route 3
+// =======
+// Filtering route
+
+app.get("/savedArticle", function(req, res) {
+    db.Article.find ( { isSaved: true },
+        function(error, found) {
+            if (error) {
+                res.send(error);
+            } else {
+                res.send(found);
+            }
+        } )
+})
+
+// Route 4
+// =======
+// it updates between False and True
+
+// app.post("/setSaved", function(req, red) {
+//     db.Article.update ( 
+//         { _id: req.body },
+//         { $set: {}} 
+
+//      })
+// })
 
 // Listen on port 3001
 app.listen(3001, function() {

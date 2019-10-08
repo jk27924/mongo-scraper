@@ -7,8 +7,8 @@ class ArticleCard extends Component {
 
   handleSave = event => {
     console.log(this.props.link);
-
-    Axios.get('http://localhost:3001/all').then(res => {console.log(res)})
+    
+    Axios.get('/all').then(res => {console.log(res)})
   }
 
   render () {

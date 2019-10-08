@@ -1,6 +1,6 @@
 .articleCard {
-    border: 1px rgb(92, 91, 91) solid;
     height: 2rem;
+    /* width: 40%; */
     padding: 15px;
     font-size: 20px;
     margin: 10px;
@@ -8,10 +8,19 @@
     background: whitesmoke;
     text-align: center;
     font-size: 25px;
+    /* position: fixed; */
 }
 
 .articleCard a {
     text-decoration: none;
     color: rgb(245, 130, 130);
     font-weight: bolder;
+    /* display: flex; */
+    height: 100%;
+
+}
+
+.saveBtn {
+    padding: 10px;
+    margin-left: 10px;
 }
