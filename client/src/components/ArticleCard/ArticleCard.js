@@ -7,7 +7,7 @@ class ArticleCard extends Component {
 
   handleSave = event => {
     console.log(this.props.link);
-    
+
     Axios.get('/all').then(res => {console.log(res)})
   }
 
@@ -17,7 +17,7 @@ class ArticleCard extends Component {
         <a href= { this.props.link }>
             {this.props.title}
         </a>
-        <button className="saveBtn" onClick={this.handleSave}>Save</button>
+        <button className="saveBtn" onClick={this.handleSave}>SAVE</button>
       </div>
     );
     }

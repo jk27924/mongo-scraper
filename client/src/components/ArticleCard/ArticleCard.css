@@ -5,7 +5,7 @@
     font-size: 20px;
     margin: 10px;
     border: none;
-    background: whitesmoke;
+    background: rgb(233, 226, 226);
     text-align: center;
     font-size: 25px;
     /* position: fixed; */
@@ -13,7 +13,7 @@
 
 .articleCard a {
     text-decoration: none;
-    color: rgb(245, 130, 130);
+    color: rgb(29,25,22);
     font-weight: bolder;
     /* display: flex; */
     height: 100%;
@@ -21,6 +21,12 @@
 }
 
 .saveBtn {
-    padding: 10px;
+    padding: 3px;
     margin-left: 10px;
+    font-size: 15px;
+    font-weight: bolder;
+    color: rgb(163, 5, 21);
+    background: gold;
+    border-radius: 10px;
+    
 }

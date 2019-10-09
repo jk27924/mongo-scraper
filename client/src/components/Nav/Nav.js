@@ -19,15 +19,15 @@ const Navbar = props => (
       <div>
         <HamburgerButton />
       </div>
-      <div className="navbar__logo"><a href="/">MANCHESTER UNITED FC</a></div>
+      <div className="navbar__logo"><a href="/">MANCHESTER UNITED FC <span id="logo__span">#NEWS #SCRAPER</span></a></div>
       <div className="spacer"></div>
       <div className="navbar__navigation-items">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">HOME</Link>
           </li>
           <li>
-            <Link to="/SavedArticle">Saved Articles</Link>
+            <Link to="/SavedArticle">SAVED ARTICLES</Link>
           </li>
         </ul>
       </div>
